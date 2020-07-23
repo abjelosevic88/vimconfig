@@ -10,7 +10,6 @@ set noerrorbells
 set tabstop=2 softtabstop=2
 set shiftwidth=2
 set expandtab
-set smartindent
 set nu
 set nowrap
 set smartcase
@@ -22,6 +21,7 @@ set incsearch
 set termguicolors
 set scrolloff=8
 set mouse=a
+set autoindent
 
 set backspace=indent,eol,start
 
@@ -80,6 +80,8 @@ Plug 'https://github.com/beloglazov/vim-textobj-punctuation'
 Plug 'https://github.com/beloglazov/vim-textobj-quotes'
 Plug 'https://github.com/idbrii/textobj-word-column.vim'
 Plug 'https://github.com/abjelosevic88/vim-textobj-variable-segment'
+Plug 'LucHermitte/lh-vim-lib'
+Plug 'LucHermitte/lh-brackets'
 
 "  I AM SO SORRY FOR DOING COLOR SCHEMES IN MY VIMRC, BUT I HAVE
 "  TOOOOOOOOOOOOO
@@ -190,17 +192,6 @@ function! SyncTree()
   endif
 endfunction
 
-
-
-"inoremap " ""<left>
-"inoremap ' ''<left>
-"inoremap ( ()<left>
-"inoremap [ []<left>
-"inoremap { {}<left>
-"inoremap {<CR> {<CR>}<ESC>O
-"inoremap {;<CR> {<CR>};<ESC>O
-"inoremap <C-e> <C-o><Right>
-
 inoremap <C-e> <Right>
 
 xmap u iu
@@ -209,6 +200,17 @@ xmap q iq
 omap q iq
 xmap f if
 omap f if
+
+let g:usemarks = 0
+
+" Copy and pase to system clipboard
+noremap <Leader>y "*y
+noremap <Leader>p "*p
+noremap <Leader>Y "+y
+noremap <Leader>P "+p
+
+" Set autoindent on all file types
+autocmd BufReadPost * setlocal autoindent
 
 " ------------- END :: CM ------------
 
