@@ -82,6 +82,7 @@ Plug 'https://github.com/idbrii/textobj-word-column.vim'
 Plug 'https://github.com/abjelosevic88/vim-textobj-variable-segment'
 Plug 'LucHermitte/lh-vim-lib'
 Plug 'LucHermitte/lh-brackets'
+Plug 'https://github.com/AndrewRadev/splitjoin.vim'
 
 "  I AM SO SORRY FOR DOING COLOR SCHEMES IN MY VIMRC, BUT I HAVE
 "  TOOOOOOOOOOOOO
